@@ -8,9 +8,12 @@ body {
   background: #333;
   color: white;
 }
-.btn {
+button {
   width: 100%;
   font-size: 1.5rem;
+}
+input {
+  width: 100%;
 }
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",

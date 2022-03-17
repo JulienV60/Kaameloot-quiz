@@ -57,7 +57,7 @@ const allQuestions = [
   {
     id: uuidv4(),
     question:
-      "Qui a dit : ah le printemps ! La nature se réveille, les oiseaux reviennent, on crame des mecs!",
+      "Qui a dit : Ah le printemps ! La nature se réveille, les oiseaux reviennent, on crame des mecs!",
     choix: ["Arthur", "Perceval", "Le Maître d'armes", "Bohort"],
     reponse: "Arthur",
   },

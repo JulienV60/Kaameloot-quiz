@@ -5,7 +5,7 @@ const FlashCardOne = (): JSX.Element => {
   const [question, setQuestion] = React.useState(false);
   const [idQuestion, setIdQuestion] = React.useState("");
   const [answer, setAnwser] = React.useState(false);
-  const [reload, setReload] = React.useState(false);
+
   React.useEffect(() => {
     function getQuestion() {
       const oneQuestion = allQuestions.map((element: any) => {
@@ -24,7 +24,6 @@ const FlashCardOne = (): JSX.Element => {
 
   function getAnwser(event: any) {
     const idresultevent = event.target.id;
-
     const oneQuestion = allQuestions.map((element: any) => {
       return element;
     });
@@ -38,33 +37,33 @@ const FlashCardOne = (): JSX.Element => {
       return element.reponse;
     });
 
-    if (answer == false) {
+    if (answer === false) {
       setAnwser(reponse[0]);
       setQuestion(false);
     } else {
       setAnwser(false);
       setQuestion(randomSuiteQuestion.question);
+      const id = randomSuiteQuestion.id;
+      setIdQuestion(id);
     }
   }
 
   return (
     <div>
-      <h1>Kaamelott</h1>
-
-      <button
-        type="button"
-        className="btn btn-primary"
-        key={idQuestion}
-        id={idQuestion}
-        onClick={getAnwser}
-      >
-        {question}
-        {answer}
-      </button>
-
-      {/* <form>
-        <input onChange={Checkifgoodanswer} type="text"></input>
-      </form> */}
+      <div>
+        <h1>Kaamelott</h1>
+        <h2>FlashCard</h2>
+        <button
+          type="button"
+          className="btn btn-primary"
+          key={idQuestion}
+          id={idQuestion}
+          onClick={getAnwser}
+        >
+          {question}
+          {answer}
+        </button>
+      </div>
     </div>
   );
 };
