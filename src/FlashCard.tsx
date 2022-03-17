@@ -3,51 +3,50 @@ import { allQuestions } from "./data/Kaameloot.js";
 
 const FlashCardOne = (): JSX.Element => {
   const [question, setQuestion] = React.useState(false);
-  const [otherQuestion, setOtherQuestion] = React.useState(false);
-  const [right, setRight] = React.useState(true);
-  const [wrong, setWrong] = React.useState(false);
-
+  const [idQuestion, setIdQuestion] = React.useState("");
+  const [answer, setAnwser] = React.useState<string[]>([]);
+  const [reload, setReload] = React.useState();
   React.useEffect(() => {
-    function ButtonQuestion() {
+    function getQuestion() {
       const oneQuestion = allQuestions.map((element: any) => {
         return element;
       });
       const randomSuiteQuestion =
         oneQuestion[Math.floor(Math.random() * oneQuestion.length)];
+
+      const id = randomSuiteQuestion.id;
+      setIdQuestion(id);
       setQuestion(randomSuiteQuestion.question);
     }
-    ButtonQuestion();
+
+    getQuestion();
   }, []);
 
-  function changeQuestion(event: any) {
-    console.log(allQuestions.length);
-    const oneQuestion = allQuestions.map((element: any) => {
-      return element;
+  function getAnwser(event: any) {
+    const idresultevent = event.target.id;
+
+    const searchbyid = allQuestions.filter((element: any) => {
+      return element.id == idresultevent;
     });
-    const randomSuiteQuestion =
-      oneQuestion[Math.floor(Math.random() * oneQuestion.length)];
+    const answer = searchbyid.map((element: any) => {
+      return element.reponse;
+    });
 
-    if (otherQuestion !== false) {
-      setQuestion(true);
-      setOtherQuestion(randomSuiteQuestion.question);
-    } else {
-      setOtherQuestion(true);
-    }
+    setQuestion(true);
+    setAnwser(answer);
   }
-
-  function Checkifgoodanswer(event: any) {
-    const result = event.target.value;
-    console.log(result);
+  function refreshPage() {
+    window.location.reload();
   }
-
   return (
     <div>
       <h1>Kaamelott</h1>
-      <button onClick={changeQuestion}>
-        Question:
-        <p>{question}</p>
-        <p>{otherQuestion}</p>
+
+      <button key={idQuestion} id={idQuestion} onClick={getAnwser}>
+        {question}
+        <p>{answer}</p>
       </button>
+      <button onClick={refreshPage}>Relancer le cul de chouette ! </button>
       {/* <form>
         <input onChange={Checkifgoodanswer} type="text"></input>
       </form> */}
