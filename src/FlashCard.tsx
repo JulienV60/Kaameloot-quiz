@@ -24,6 +24,7 @@ const FlashCardOne = (): JSX.Element => {
 
   function getAnwser(event: any) {
     const idresultevent = event.target.id;
+
     const oneQuestion = allQuestions.map((element: any) => {
       return element;
     });
