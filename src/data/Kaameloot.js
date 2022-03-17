@@ -44,7 +44,7 @@ const allQuestions = [
   },
   {
     id: uuidv4(),
-    question: "Qui a dit : Faut pas respirer la compote,ça fait tousser",
+    question: "Qui a dit : Faut pas respirer la compote,ça fait tousser ?",
     choix: ["Guethenoc", "Léodagan", "Kadoc", "Karadoc"],
     reponse: "Kadoc",
   },
