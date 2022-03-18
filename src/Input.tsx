@@ -37,7 +37,6 @@ const InputText = (): JSX.Element => {
       return element.reponse;
     });
     if (checkAnswer === compareReponse[0]) {
-      setQuestiondeux(false);
       setReplayInput(
         <button className="ebtn btn-warning" onClick={() => setSloubi(true)}>
           Sloubi ?
@@ -47,7 +46,6 @@ const InputText = (): JSX.Element => {
         <div className="progress-bar bg-success">C'est pas faux </div>
       );
     } else {
-      setQuestiondeux(false);
       setReplayInput(
         <button className="ebtn btn-warning" onClick={() => setSloubi(true)}>
           Sloubi ?
