@@ -46,7 +46,7 @@ const InputText = (): JSX.Element => {
         </button>
       );
       setAnwserdeux(
-        <div className="progress-bar bg-success">C'est pas faux </div>
+        <div className="eprogress-bar bg-success">C'est pas faux 👍</div>
       );
     } else {
       setReplayInput(
@@ -55,7 +55,7 @@ const InputText = (): JSX.Element => {
         </button>
       );
       setAnwserdeux(
-        <div className="progress-bar bg-danger">C'est de la merde </div>
+        <div className="eprogress-bar bg-danger">C'est de la merde 👎 </div>
       );
     }
   }

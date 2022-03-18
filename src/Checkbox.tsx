@@ -56,7 +56,7 @@ const Checkbox = (): JSX.Element => {
         </button>
       );
       setAnwsertrois(
-        <div className="progress-bar bg-success">C'est pas faux </div>
+        <div className="progress-bar bg-success">C'est pas faux 👍</div>
       );
     } else {
       setReplayInputTrois(
@@ -68,7 +68,7 @@ const Checkbox = (): JSX.Element => {
         </button>
       );
       setAnwsertrois(
-        <div className="progress-bar bg-danger">C'est de la merde </div>
+        <div className="progress-bar bg-danger">C'est de la merde 👎</div>
       );
     }
   }
