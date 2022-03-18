@@ -9,18 +9,16 @@ const Checkbox = (): JSX.Element => {
   const [sloubiDeux, setSloubiDeux] = React.useState(false);
   const [replayInputTrois, setReplayInputTrois] = React.useState(<></>);
   const [choice, setChoice] = React.useState("");
-  const player = 0;
-  const ordi = 0;
-  const result: number[] = [];
+
   React.useEffect(() => {
     function getQuestion() {
-      const oneQuestion = allQuestions.map((element: any) => {
-        return element;
-      });
-      const randomSuiteQuestion =
-        oneQuestion[Math.floor(Math.random() * oneQuestion.length)];
-      const id = randomSuiteQuestion.id;
-      const showChoice = randomSuiteQuestion.choix;
+      // const oneQuestion = allQuestions.map((element: any) => {
+      //   return element;
+      // });
+      // const randomSuiteQuestion =
+      //   oneQuestion[Math.floor(Math.random() * oneQuestion.length)];
+      // const id = randomSuiteQuestion.id;
+      // const showChoice = randomSuiteQuestion.choix;
 
       setChoice(showChoice);
       setIdQuestiontrois(id);
@@ -32,6 +30,14 @@ const Checkbox = (): JSX.Element => {
 
     getQuestion();
   }, [sloubiDeux]);
+  const oneQuestion = allQuestions.map((element: any) => {
+    return element;
+  });
+  const randomSuiteQuestion =
+    oneQuestion[Math.floor(Math.random() * oneQuestion.length)];
+  const id = randomSuiteQuestion.id;
+  const showChoice = randomSuiteQuestion.choix;
+
   function checkChoice(event: any) {
     const formId = event.target.parentNode.id;
     const choiceCheckBox = event.target.firstChild.textContent;
@@ -44,10 +50,6 @@ const Checkbox = (): JSX.Element => {
     });
 
     if (choiceCheckBox === reponseBySearch[0]) {
-      result.push(player);
-
-      setQuestiontrois(false);
-      setIdQuestiontrois("");
       setReplayInputTrois(
         <button className="btn btn-warning" onClick={() => setSloubiDeux(true)}>
           Sloubi ?
@@ -57,8 +59,6 @@ const Checkbox = (): JSX.Element => {
         <div className="progress-bar bg-success">C'est pas faux </div>
       );
     } else {
-      setQuestiontrois(false);
-      setIdQuestiontrois("");
       setReplayInputTrois(
         <button
           className="ebtn btn-warning"
@@ -72,7 +72,7 @@ const Checkbox = (): JSX.Element => {
       );
     }
   }
-  console.log(result);
+
   return (
     <div className="zcard text-center text-white bg-dark">
       {questiontrois}
