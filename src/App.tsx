@@ -19,7 +19,7 @@ export const App: React.FC = () => {
         </a>
 
         <button
-          className="navbar-toggler user-select-none"
+          className="navbar-toggler "
           type="button"
           data-toggle="collapse"
           data-target="#navbarSupportedContent"

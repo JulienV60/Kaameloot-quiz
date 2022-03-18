@@ -12,7 +12,9 @@ body {
   color: #222;
   line-height: 2rem;
 }
-
+.nav-bar {
+  cursor: none;
+}
 .card {
   width: 60%;
   margin-top: 10%;
