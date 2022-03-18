@@ -38,7 +38,7 @@ const Checkbox = (): JSX.Element => {
     const reponseBySearch = searchByFormId.map((element: any) => {
       return element.reponse;
     });
-
+    console.log(choiceCheckBox);
     if (choiceCheckBox === reponseBySearch[0]) {
       setQuestiontrois(false);
       setIdQuestiontrois("");
@@ -53,7 +53,10 @@ const Checkbox = (): JSX.Element => {
     } else {
       setQuestiontrois(false);
       setReplayInputTrois(
-        <button className="btn btn-warning" onClick={() => setSloubiDeux(true)}>
+        <button
+          className="ebtn btn-warning"
+          onClick={() => setSloubiDeux(true)}
+        >
           Sloubi ?
         </button>
       );
@@ -63,52 +66,48 @@ const Checkbox = (): JSX.Element => {
     }
   }
   return (
-    <div>
-      <h2>CheckBox</h2>
-      <div className="bg-light">
-        <div className="progress-bar bg-primary ">
-          {questiontrois}
-          {answertrois}
-        </div>
-        <div
-          className="btn-group bg-light"
-          role="group"
-          aria-label="Basic checkbox toggle
+    <div className="zcard text-center text-white bg-dark">
+      {questiontrois}
+      {answertrois}
+
+      <div
+        className="zbtn-group bg-dark"
+        role="group"
+        aria-label="Basic checkbox toggle
           button group"
-        >
-          <form id={idQuestiontrois} onClick={checkChoice}>
-            <input
-              type="checkbox"
-              className="btn-check"
-              onClick={checkChoice}
-              id="btncheck1"
-            ></input>
-            <label className="btn btn-outline-primary">{choice[0]}</label>
-            <input
-              type="checkbox"
-              onClick={checkChoice}
-              className="btn-check"
-              id="btncheck2"
-            ></input>
-            <label className="btn btn-outline-primary">{choice[1]}</label>
-            <input
-              type="checkbox"
-              onClick={checkChoice}
-              className="btn-check"
-              id="btncheck3"
-            ></input>
-            <label className="btn btn-outline-primary ">{choice[2]}</label>
-            <input
-              type="checkbox"
-              onClick={checkChoice}
-              className="btn-check"
-              id="btncheck4"
-            ></input>
-            <label className="btn btn-outline-primary">{choice[3]}</label>
-          </form>
-        </div>
-        {replayInputTrois}
+      >
+        <form id={idQuestiontrois} onClick={checkChoice}>
+          <input
+            type="checkbox"
+            className="btn-check"
+            onClick={checkChoice}
+            id="btncheck1"
+          ></input>
+          <label className="zbtn btn-outline-primary">{choice[0]}</label>
+          <input
+            type="checkbox"
+            onClick={checkChoice}
+            className="btn-check"
+            id="btncheck2"
+          ></input>
+          <label className="zbtn btn-outline-primary">{choice[1]}</label>
+          <input
+            type="checkbox"
+            onClick={checkChoice}
+            className="btn-check"
+            id="btncheck3"
+          ></input>
+          <label className="zbtn btn-outline-primary ">{choice[2]}</label>
+          <input
+            type="checkbox"
+            onClick={checkChoice}
+            className="btn-check"
+            id="btncheck4"
+          ></input>
+          <label className="zbtn btn-outline-primary">{choice[3]}</label>
+        </form>
       </div>
+      {replayInputTrois}
     </div>
   );
 };

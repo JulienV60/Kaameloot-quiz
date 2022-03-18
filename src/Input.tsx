@@ -39,7 +39,7 @@ const InputText = (): JSX.Element => {
     if (checkAnswer === compareReponse[0]) {
       setQuestiondeux(false);
       setReplayInput(
-        <button className="btn btn-warning" onClick={() => setSloubi(true)}>
+        <button className="ebtn btn-warning" onClick={() => setSloubi(true)}>
           Sloubi ?
         </button>
       );
@@ -49,7 +49,7 @@ const InputText = (): JSX.Element => {
     } else {
       setQuestiondeux(false);
       setReplayInput(
-        <button className="btn btn-warning" onClick={() => setSloubi(true)}>
+        <button className="ebtn btn-warning" onClick={() => setSloubi(true)}>
           Sloubi ?
         </button>
       );
@@ -61,8 +61,7 @@ const InputText = (): JSX.Element => {
 
   return (
     <div>
-      <h2>Answer the question</h2>
-      <div className="progress-bar bg-primary">
+      <div className="ecard text-center text-white bg-dark">
         {questiondeux}
         {answerdeux}
         <form
@@ -79,7 +78,7 @@ const InputText = (): JSX.Element => {
             // onChange={getAnswerInput}
             placeholder="Enter your answer..."
           ></input>
-          <button type="submit" className="btn btn-secondary">
+          <button type="submit" className="sbtn btn-secondary">
             Envoyer
           </button>
         </form>

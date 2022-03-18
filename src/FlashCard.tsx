@@ -50,13 +50,11 @@ const FlashCardOne = (): JSX.Element => {
   }
 
   return (
-    <div>
-      <div>
-        <h1>Kaamelott</h1>
-        <h2>FlashCard</h2>
+    <div className="card text-center text-white bg-dark">
+      <div className="card-body">
         <button
           type="button"
-          className="btn btn-primary"
+          className="btn btn-primary text-center"
           key={idQuestion}
           id={idQuestion}
           onClick={getAnwser}

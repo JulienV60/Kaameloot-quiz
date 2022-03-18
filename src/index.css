@@ -5,13 +5,70 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: url(https://cdn.radiofrance.fr/s3/cruiser-production/2019/03/2a0ecc7b-457d-4492-b817-65771b99dc08/1136_0988681.jpg-r_1920_1080-f_jpg-q_x-xxyxx.jpg),
-    no-repeat;
-  color: white;
+  background: URL(https://i.ytimg.com/vi/EM8D1TKEKJg/maxresdefault.jpg);
+
+  background-repeat: no-repeat, cover;
+  background-size: cover;
+  color: #222;
+  line-height: 2rem;
 }
-button {
+
+.card {
+  width: 60%;
+  margin-top: 10%;
+  margin-left: 21%;
+  border-radius: 3rem;
+  font-size: 2rem;
+  padding: 2rem 4rem 4rem 4rem;
+}
+.btn {
+  padding-bottom: 4rem;
+  font-size: 2rem;
+  padding-top: 4rem;
+  margin-top: 2rem;
+  border-radius: 1rem;
   width: 100%;
-  font-size: 1.5rem;
+}
+.ecard {
+  width: 60%;
+  margin-top: 3%;
+  margin-left: 22%;
+  border-radius: 3rem;
+  font-size: 2rem;
+  padding: 2rem 4rem 4rem 4rem;
+  line-height: 5rem;
+}
+.sbtn {
+  font-size: 2rem;
+  margin-top: 4rem;
+  border-radius: 10%;
+  width: 20%;
+}
+.form-control {
+  width: 80%;
+  font-size: 2rem;
+  margin-left: 5rem;
+  margin-top: 2rem;
+}
+.zcard {
+  width: 60%;
+  margin-top: 10%;
+  margin-left: 21%;
+  border-radius: 3rem;
+  font-size: 2rem;
+  padding: 2rem 4rem 4rem 4rem;
+  line-height: 5rem;
+}
+.zbtn {
+  font-size: 2rem;
+  border-radius: 10%;
+  width: 50%;
+}
+.ebtn {
+  font-size: 2rem;
+  margin-top: 1rem;
+  border-radius: 10%;
+  width: 30%;
 }
 
 code {
