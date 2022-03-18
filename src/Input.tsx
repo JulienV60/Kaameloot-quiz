@@ -30,19 +30,12 @@ const InputText = (): JSX.Element => {
   function getAnswerInput(event: any) {
     event.preventDefault();
     const id = event.target.id;
-    const arrayQuestion = allQuestions.map((element: any) => {
-      return element;
-    });
-
-    const randomSuiteQuesiton =
-      arrayQuestion[Math.floor(Math.random() * arrayQuestion.length)];
     const searchbyid = allQuestions.filter((element: any) => {
       return element.id === id;
     });
     const compareReponse = searchbyid.map((element: any) => {
       return element.reponse;
     });
-    const newid = randomSuiteQuesiton.id;
     if (checkAnswer === compareReponse[0]) {
       setQuestiondeux(false);
       setReplayInput(
@@ -55,7 +48,6 @@ const InputText = (): JSX.Element => {
       );
     } else {
       setQuestiondeux(false);
-
       setReplayInput(
         <button className="btn btn-warning" onClick={() => setSloubi(true)}>
           Sloubi ?

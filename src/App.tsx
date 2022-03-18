@@ -1,13 +1,14 @@
 import React from "react";
 import FlashCardOne from "./FlashCard";
-
-import "./index.css";
 import InputText from "./Input";
+import Checkbox from "./Checkbox";
+import "./index.css";
 export const App: React.FC = () => {
   return (
-    <div id="app" className="conainter default-flex">
+    <div>
       <FlashCardOne />
       <InputText />
+      <Checkbox />
     </div>
   );
 };

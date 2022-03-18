@@ -5,16 +5,15 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: #333;
+  background: url(https://cdn.radiofrance.fr/s3/cruiser-production/2019/03/2a0ecc7b-457d-4492-b817-65771b99dc08/1136_0988681.jpg-r_1920_1080-f_jpg-q_x-xxyxx.jpg),
+    no-repeat;
   color: white;
 }
 button {
   width: 100%;
   font-size: 1.5rem;
 }
-input {
-  width: 100%;
-}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
