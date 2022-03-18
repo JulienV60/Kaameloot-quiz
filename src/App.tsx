@@ -5,10 +5,19 @@ import Checkbox from "./Checkbox";
 import "./index.css";
 export const App: React.FC = () => {
   const [elementSelect, setElementSelect] = React.useState(<></>);
+
+  const audio = new Audio(require("./Kaamelott.mp3"));
+  const start = () => {
+    audio.play();
+  };
+
   return (
     <div className="App">
       <nav className="navbar navbar-expand-lg navbar-dark bg-dark position-static">
-        <a className="navbar-brand user-select-none">Quiz Kaamelott</a>
+        <a className="navbar-brand user-select-none" onClick={start}>
+          Quiz Kaamelott
+        </a>
+
         <button
           className="navbar-toggler user-select-none"
           type="button"
