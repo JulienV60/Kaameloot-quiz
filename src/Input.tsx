@@ -8,6 +8,7 @@ const InputText = (): JSX.Element => {
   const [checkAnswer, setCheckAnswer] = React.useState("");
   const [sloubi, setSloubi] = React.useState(false);
   const [replayInput, setReplayInput] = React.useState(<></>);
+  const [scoreSloubi, setScoreSloubi] = React.useState<number[]>([]);
   React.useEffect(() => {
     function getQuestion() {
       const oneQuestion = allQuestions.map((element: any) => {
@@ -37,6 +38,8 @@ const InputText = (): JSX.Element => {
       return element.reponse;
     });
     if (checkAnswer === compareReponse[0]) {
+      setScoreSloubi([1, 0]);
+      console.log(scoreSloubi);
       setReplayInput(
         <button className="ebtn btn-warning" onClick={() => setSloubi(true)}>
           Sloubi ?
@@ -56,7 +59,6 @@ const InputText = (): JSX.Element => {
       );
     }
   }
-
   return (
     <div>
       <div className="ecard text-center text-white bg-dark">

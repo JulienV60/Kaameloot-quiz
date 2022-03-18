@@ -11,8 +11,9 @@ body {
   color: white;
   line-height: 2rem;
 }
-.nav-bar {
-  cursor: none;
+.navbar {
+  cursor: default;
+  padding-left: 2rem;
 }
 .card {
   width: 60%;
@@ -62,13 +63,13 @@ body {
 }
 .zbtn {
   font-size: 2rem;
-  border-radius: 10%;
+  border-radius: 5px;
   width: 50%;
 }
 .ebtn {
   font-size: 2rem;
   margin-top: 1rem;
-  border-radius: 10%;
+  border-radius: 5px;
   width: 30%;
 }
 
