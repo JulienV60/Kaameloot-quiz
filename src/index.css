@@ -5,11 +5,9 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: URL(https://i.ytimg.com/vi/EM8D1TKEKJg/maxresdefault.jpg);
+  background: URL(https://i.pinimg.com/originals/0e/0f/9a/0e0f9a113ab39082226e71fbbcab3a31.jpg),no-repeat,100%;
 
-  background-repeat: no-repeat, cover;
-  background-size: cover;
-  color: #222;
+  color: white;
   line-height: 2rem;
 }
 .nav-bar {
@@ -18,7 +16,7 @@ body {
 .card {
   width: 60%;
   margin-top: 10%;
-  margin-left: 21%;
+  margin-left: 11%;
   border-radius: 3rem;
   font-size: 2rem;
   padding: 2rem 4rem 4rem 4rem;
@@ -34,7 +32,7 @@ body {
 .ecard {
   width: 60%;
   margin-top: 3%;
-  margin-left: 22%;
+  margin-left: 12%;
   border-radius: 3rem;
   font-size: 2rem;
   padding: 2rem 4rem 4rem 4rem;
@@ -55,7 +53,7 @@ body {
 .zcard {
   width: 60%;
   margin-top: 10%;
-  margin-left: 21%;
+  margin-left: 13%;
   border-radius: 3rem;
   font-size: 2rem;
   padding: 2rem 4rem 4rem 4rem;

@@ -14,8 +14,14 @@ export const App: React.FC = () => {
   return (
     <div className="App">
       <nav className="navbar navbar-expand-lg navbar-dark bg-dark position-static">
+        <a
+          className="navbar-brand user-select-none"
+          href="http://localhost:3000"
+        >
+          Home
+        </a>
         <a className="navbar-brand user-select-none" onClick={start}>
-          Quiz Kaamelott
+          Kaamelott
         </a>
 
         <button

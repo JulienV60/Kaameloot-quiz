@@ -9,6 +9,9 @@ const Checkbox = (): JSX.Element => {
   const [sloubiDeux, setSloubiDeux] = React.useState(false);
   const [replayInputTrois, setReplayInputTrois] = React.useState(<></>);
   const [choice, setChoice] = React.useState("");
+  const player = 0;
+  const ordi = 0;
+  const result: number[] = [];
   React.useEffect(() => {
     function getQuestion() {
       const oneQuestion = allQuestions.map((element: any) => {
@@ -18,6 +21,7 @@ const Checkbox = (): JSX.Element => {
         oneQuestion[Math.floor(Math.random() * oneQuestion.length)];
       const id = randomSuiteQuestion.id;
       const showChoice = randomSuiteQuestion.choix;
+
       setChoice(showChoice);
       setIdQuestiontrois(id);
       setQuestiontrois(randomSuiteQuestion.question);
@@ -38,8 +42,10 @@ const Checkbox = (): JSX.Element => {
     const reponseBySearch = searchByFormId.map((element: any) => {
       return element.reponse;
     });
-    console.log(choiceCheckBox);
+
     if (choiceCheckBox === reponseBySearch[0]) {
+      result.push(player);
+
       setQuestiontrois(false);
       setIdQuestiontrois("");
       setReplayInputTrois(
@@ -52,6 +58,7 @@ const Checkbox = (): JSX.Element => {
       );
     } else {
       setQuestiontrois(false);
+      setIdQuestiontrois("");
       setReplayInputTrois(
         <button
           className="ebtn btn-warning"
@@ -65,6 +72,7 @@ const Checkbox = (): JSX.Element => {
       );
     }
   }
+  console.log(result);
   return (
     <div className="zcard text-center text-white bg-dark">
       {questiontrois}
