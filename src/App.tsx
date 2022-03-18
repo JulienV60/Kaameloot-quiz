@@ -16,7 +16,7 @@ export const App: React.FC = () => {
       <nav className="navbar navbar-expand-lg navbar-dark bg-dark position-static">
         <a
           className="navbar-brand user-select-none"
-          href="http://localhost:3000"
+          href="https://quizkaamelott.herokuapp.com"
         >
           Home
         </a>
